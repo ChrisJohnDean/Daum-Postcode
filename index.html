@@ -20,6 +20,10 @@
                         console.log("onReceivedPostMessage "+event);
                     }
 
+                    function postMessageToiOS(postData) {
+                        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+                    }
+
                     var element_layer = document.getElementById('layer');
                     function execDaumPostcode() {
                         alert("alert");
@@ -27,7 +31,8 @@
                             oncomplete: function(data) {
                                 alert("onComplete");
                                 console.log("hello world");
-                                window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+                                // window.webkit.messageHandlers.callBackHandler.postMessage(data);
+                                window.postMessageToiOS(dsts);
                             },
                             width : '100%',
                             height : '100%'
