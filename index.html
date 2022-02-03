@@ -10,10 +10,9 @@
       </div>
                 <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>    
                 <script>
-                    // alert("second script");
+
                     window.addEventListener("message", onReceivedPostMessage, false);
-                    // alert("second script");
-                    // console.log("hello world");
+
                     function onReceivedPostMessage(event) {
                         var action = event.data.action;
                         var params = event.data.params;
@@ -45,7 +44,7 @@
                                 }
 
                                 var postData = {
-                                    roadAddress : address,
+                                    address : address,
                                     zonecode : data.zonecode,
                                     city : data.sido
                                 };
