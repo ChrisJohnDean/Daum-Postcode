@@ -11,12 +11,12 @@
         <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>    
         <script>
 
-            window.addEventListener("message", onReceivedPostMessage, false);
+//             window.addEventListener("message", onReceivedPostMessage, false);
 
-            function onReceivedPostMessage(event) {
-                var action = event.data.action;
-                var params = event.data.params;
-            }
+//             function onReceivedPostMessage(event) {
+//                 var action = event.data.action;
+//                 var params = event.data.params;
+//             }
 
             function postMessageToiOS(postData) {
                 window.webkit.messageHandlers.callBackHandler.postMessage(postData);
